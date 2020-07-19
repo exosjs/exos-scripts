@@ -53,4 +53,25 @@ Then, update your **package.json** with the following:
 }
 ```
 
+## Extending/Replacing the script configuration
+
+To extend or replace the scripts configurations, you have to create an **.exos.config.js** file exporting the following:
+
+```js
+module.exports = {
+  scripts: {
+    lint: (config, { env }) => {
+      // TODO: Modify the config or replace it entirely
+      return config;
+    },
+    start: (config, { env }) => {
+      // TODO: Modify the config or replace it entirely
+      return config;
+    },
+  },
+};
+```
+
+You can modify the configuration of all the scripts this way (`lint`, `start`, `test`, `start`,`build`) by passing a function that receives the default config used by **exos-scripts** and the configuration variables used (in the example above, `env` tells you the value of `NODE_ENV` used by the script), and returns the modified configuration.
+
 🚀!
