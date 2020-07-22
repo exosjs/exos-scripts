@@ -1,4 +1,3 @@
 {
   "extends": ["./src/scripts/stylelint/.stylelintrc.js"]
-  // If you want to customize this file, see TBD
 }
