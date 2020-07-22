@@ -3,5 +3,7 @@ module.exports = {
     "stylelint-config-property-sort-order-smacss",
     "stylelint-config-standard",
   ],
-  rules: {},
+  rules: {
+    "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["export", "import", "global", "local", "external", "root"] }],
+  },
 };
