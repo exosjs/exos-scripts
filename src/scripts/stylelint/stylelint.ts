@@ -20,7 +20,7 @@ import stylelintrc = require('./.stylelintrc.js');
    * Using relative path here due to an issue with stylelint path resolution:
    * it does not work with Windows style paths correctly
    */
-  const defaultFilesToUse = ['/**/*.{scss,css}'];
+  const defaultFilesToUse = ['./**/*.{scss,css}'];
   const filesToUse = getFilesToUse('--files=', defaultFilesToUse);
   console.log(filesToUse !== defaultFilesToUse ? 'Found custom rule to identify files to use' : 'Using default rule to identify files');
 
