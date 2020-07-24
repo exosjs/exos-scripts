@@ -1,1 +1,1 @@
-const notUsed = "this string is not used";
+const notUsed = 'this string is not used';

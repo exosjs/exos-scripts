@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/exosjs/exos-scripts#readme",
   "scripts": {
-    "lint": "eslint --ext .js --ext .ts src/",
+    "lint": "eslint --ext .js --ext .ts .",
     "test": "npm run build && jest --config=./src/scripts/test/jest.config.library.js --coverage=false",
     "build": "rm -rf lib && tsc",
     "prepublishOnly": "npm run build",
