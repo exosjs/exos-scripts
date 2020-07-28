@@ -5,7 +5,7 @@ if (!process.env.NODE_ENV) {
 }
 
 // We need to set up process.env.NODE_ENV because
-//  the imported files will use this value
+// the imported files will use this value
 /* eslint-disable import/first */
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
