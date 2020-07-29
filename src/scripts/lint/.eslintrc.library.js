@@ -39,22 +39,22 @@ module.exports = {
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     'object-curly-newline': ['error', {
       ObjectExpression: {
-        minProperties: 2,
+        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ObjectPattern: {
-        minProperties: 2,
+        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ImportDeclaration: {
-        minProperties: 2,
+        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ExportDeclaration: {
-        minProperties: 2,
+        minProperties: 3,
         multiline: true,
         consistent: true,
       },

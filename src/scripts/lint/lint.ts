@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 import chalk from 'chalk';
 import path from 'path';
-import {
-  ESLint, Linter,
-} from 'eslint';
+import { ESLint, Linter } from 'eslint';
 import { SOURCE_PATH } from '../../common/paths';
 import getConfigToUse from '../../common/getConfigToUse';
 import getFilesToUse from '../../common/getFilesToUse';

@@ -4,7 +4,9 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import {
-  ASSETS_PATH, OUTPUT_PATH, OUTPUT_PUBLIC_PATH,
+  ASSETS_PATH,
+  OUTPUT_PATH,
+  OUTPUT_PUBLIC_PATH,
 } from '../common/paths';
 
 export default (isDevelopment: boolean, isLibrary: boolean, version: string): webpack.Plugin[] => {

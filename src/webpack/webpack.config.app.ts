@@ -1,7 +1,9 @@
 import path from 'path';
 import type webpack from 'webpack';
 import {
-  ROOT_PATH, OUTPUT_PATH, OUTPUT_PUBLIC_PATH,
+  ROOT_PATH,
+  OUTPUT_PATH,
+  OUTPUT_PUBLIC_PATH,
 } from '../common/paths';
 import resolveAliases from './resolveAliases';
 import resolveExternals from './resolveExternals';
