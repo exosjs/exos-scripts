@@ -33,7 +33,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
     'react/static-property-placement': ['error', 'static public field'],
-    'react/function-component-definition': ['error', { 'namedComponents': 'function-declaration' }],
+    'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
     'react/no-multi-comp': 'error',
     'react/sort-prop-types': ['error', {
       callbacksLast: true,
@@ -44,7 +44,10 @@ module.exports = {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
     }],
-    'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'always' }],
+    'react/jsx-max-props-per-line': ['error', {
+      maximum: 1,
+      when: 'always',
+    }],
     'react/jsx-no-bind': ['error', {
       ignoreRefs: true,
       allowArrowFunctions: false,
@@ -53,15 +56,36 @@ module.exports = {
       ignoreDOMComponents: false,
     }],
     'import/no-extraneous-dependencies': ['off'],
-    'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
+    'import/extensions': ['error', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
-      ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
-      ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
-      ImportDeclaration: { minProperties: 3, multiline: true, consistent: true },
-      ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
+      ObjectExpression: {
+        minProperties: 3,
+        multiline: true,
+        consistent: true,
+      },
+      ObjectPattern: {
+        minProperties: 3,
+        multiline: true,
+        consistent: true,
+      },
+      ImportDeclaration: {
+        minProperties: 3,
+        multiline: true,
+        consistent: true,
+      },
+      ExportDeclaration: {
+        minProperties: 3,
+        multiline: true,
+        consistent: true,
+      },
     }],
   },
   overrides: [

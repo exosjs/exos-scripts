@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { CONFIG_PATH } from './paths';
-import type { ExosConfig, ExosScripts } from './types';
+import type {
+  ExosConfig, ExosScripts,
+} from './types';
 
 /**
  * Retrieves the configuration to use.

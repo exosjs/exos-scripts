@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import chalk from 'chalk';
 import path from 'path';
-import { ESLint, Linter } from 'eslint';
+import {
+  ESLint, Linter,
+} from 'eslint';
 import { SOURCE_PATH } from '../../common/paths';
 import getConfigToUse from '../../common/getConfigToUse';
 import getFilesToUse from '../../common/getFilesToUse';
@@ -53,7 +55,10 @@ console.log(filesToUse !== defaultFilesToUse ? `Found custom rule to identify fi
         /* eslint-enable */
         return globalAcc;
       },
-      { errorCount: 0, warningCount: 0 },
+      {
+        errorCount: 0,
+        warningCount: 0,
+      },
     );
 
     // Format the (global) results and output them

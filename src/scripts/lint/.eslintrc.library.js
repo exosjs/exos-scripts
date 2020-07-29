@@ -26,16 +26,38 @@ module.exports = {
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
-    'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
+    'import/extensions': ['error', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
     'import/no-extraneous-dependencies': ['off'],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
     'no-prototype-builtins': 'off',
+    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     'object-curly-newline': ['error', {
-      ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
-      ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
-      ImportDeclaration: { minProperties: 3, multiline: true, consistent: true },
-      ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
+      ObjectExpression: {
+        minProperties: 2,
+        multiline: true,
+        consistent: true,
+      },
+      ObjectPattern: {
+        minProperties: 2,
+        multiline: true,
+        consistent: true,
+      },
+      ImportDeclaration: {
+        minProperties: 2,
+        multiline: true,
+        consistent: true,
+      },
+      ExportDeclaration: {
+        minProperties: 2,
+        multiline: true,
+        consistent: true,
+      },
     }],
   },
   overrides: [
