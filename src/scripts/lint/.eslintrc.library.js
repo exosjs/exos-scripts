@@ -27,12 +27,23 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
     'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
+    'import/no-extraneous-dependencies': ['off'],
+    'func-names': ['error', 'always'],
+    'func-style': ['error', 'declaration'],
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
-      ObjectExpression: { multiline: true, consistent: true },
-      ObjectPattern: { multiline: true, consistent: true },
-      ImportDeclaration: { multiline: true, consistent: true },
-      ExportDeclaration: { multiline: true, consistent: true },
+      ObjectExpression: { minProperties: 3, multiline: true, consistent: true },
+      ObjectPattern: { minProperties: 3, multiline: true, consistent: true },
+      ImportDeclaration: { minProperties: 3, multiline: true, consistent: true },
+      ExportDeclaration: { minProperties: 3, multiline: true, consistent: true },
     }],
   },
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 };
