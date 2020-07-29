@@ -67,22 +67,18 @@ module.exports = {
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
       ObjectExpression: {
-        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ObjectPattern: {
-        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ImportDeclaration: {
-        minProperties: 3,
         multiline: true,
         consistent: true,
       },
       ExportDeclaration: {
-        minProperties: 3,
         multiline: true,
         consistent: true,
       },
