@@ -25,6 +25,7 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
     'import/extensions': ['error', {
       js: 'never',
