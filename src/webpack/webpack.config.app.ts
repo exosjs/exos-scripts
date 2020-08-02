@@ -29,10 +29,12 @@ const webpackConfig: webpack.Configuration = {
 
   mode: isDevelopment ? 'development' : 'production',
 
-  entry: path.resolve(ROOT_PATH, './src/index.tsx'),
+  entry: {
+    bundle: path.resolve(ROOT_PATH, './src/index.tsx'),
+  },
 
   output: {
-    filename: 'bundle.[hash:5].min.js',
+    filename: '[name].[hash:5].min.js',
     path: OUTPUT_PATH,
     publicPath: OUTPUT_PUBLIC_PATH,
   },
