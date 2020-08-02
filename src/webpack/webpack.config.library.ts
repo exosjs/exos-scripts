@@ -21,10 +21,12 @@ const webpackConfig: webpack.Configuration = {
 
   mode: isDevelopment ? 'development' : 'production',
 
-  entry: path.resolve(ROOT_PATH, './src/index.tsx'),
+  entry: {
+    index: path.resolve(ROOT_PATH, './src/index.tsx'),
+  },
 
   output: {
-    filename: 'index.min.js',
+    filename: '[name].min.js',
     path: OUTPUT_PATH,
     libraryTarget: 'commonjs2',
   },
