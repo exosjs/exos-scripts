@@ -53,7 +53,7 @@ module.exports = {
       ignoreRefs: true,
       allowArrowFunctions: false,
       allowFunctions: false,
-      allowBind: false,
+      allowBind: true,
       ignoreDOMComponents: false,
     }],
     'import/no-extraneous-dependencies': ['off'],
