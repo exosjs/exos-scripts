@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = 'prod';
+}
+
+// We need to set up process.env.NODE_ENV because
+// the imported files will use this value
+/* eslint-disable import/first */
 import chalk from 'chalk';
 import webpack from 'webpack';
 import webpackConfig from '../../webpack/webpack.config';
 import getConfigToUse from '../../common/getConfigToUse';
 import { ExosScripts } from '../../common/types';
-
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'prod';
-}
 
 const configToUse = getConfigToUse<webpack.Configuration>(ExosScripts.build, webpackConfig);
 console.log(configToUse !== webpackConfig ? 'Found custom build config' : 'Using default build config');
@@ -31,7 +34,11 @@ compiler.run((err: Error, stats: webpack.Stats) => {
     process.exit(1);
   }
 
-  const executionStats = stats.toJson({ all: false, warnings: true, errors: true });
+  const executionStats = stats.toJson({
+    all: false,
+    warnings: true,
+    errors: true,
+  });
 
   if (executionStats.errors.length) {
     // Only print the first error. Others are often indicative

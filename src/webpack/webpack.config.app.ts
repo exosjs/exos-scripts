@@ -1,6 +1,10 @@
 import path from 'path';
 import type webpack from 'webpack';
-import { ROOT_PATH, OUTPUT_PATH, OUTPUT_PUBLIC_PATH } from '../common/paths';
+import {
+  ROOT_PATH,
+  OUTPUT_PATH,
+  OUTPUT_PUBLIC_PATH,
+} from '../common/paths';
 import resolveAliases from './resolveAliases';
 import resolveExternals from './resolveExternals';
 import resolveModuleRules from './resolveModuleRules';
@@ -29,10 +33,12 @@ const webpackConfig: webpack.Configuration = {
 
   mode: isDevelopment ? 'development' : 'production',
 
-  entry: path.resolve(ROOT_PATH, './src/index.tsx'),
+  entry: {
+    bundle: path.resolve(ROOT_PATH, './src/index.tsx'),
+  },
 
   output: {
-    filename: 'bundle.[hash:5].min.js',
+    filename: '[name].[hash:5].min.js',
     path: OUTPUT_PATH,
     publicPath: OUTPUT_PUBLIC_PATH,
   },

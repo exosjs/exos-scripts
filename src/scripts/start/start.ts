@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = 'dev';
+}
+
+// We need to set up process.env.NODE_ENV because
+// the imported files will use this value
+/* eslint-disable import/first */
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import storybook from '@storybook/react/standalone';
@@ -8,10 +15,6 @@ import webpackConfig from '../../webpack/webpack.config';
 import getConfigToUse from '../../common/getConfigToUse';
 import { ExosScripts } from '../../common/types';
 import getArgumentValue from '../../common/getArgumentValue';
-
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'dev';
-}
 
 const startStorybook = getArgumentValue(process.argv, 'storybook');
 

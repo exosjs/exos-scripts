@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
 import chalk from 'chalk';
-import path from 'path';
 import stylelint from 'stylelint';
-import { SOURCE_PATH, ROOT_PATH } from '../../common/paths';
+import { ROOT_PATH } from '../../common/paths';
 import getConfigToUse from '../../common/getConfigToUse';
 import getFilesToUse from '../../common/getFilesToUse';
 import { ExosScripts } from '../../common/types';
@@ -26,8 +25,13 @@ import stylelintrc from './.stylelintrc.js';
 
   try {
     // Lint files and get the lint result
-    const options = { config: configToUse, files: filesToUse };
-    const { errored, results } = await stylelint.lint(options);
+    const options = {
+      config: configToUse,
+      files: filesToUse,
+    };
+    const {
+      errored, results,
+    } = await stylelint.lint(options);
 
     // Output the results and exit the process based on them
     if (errored) {
