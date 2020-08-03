@@ -46,7 +46,10 @@ export default (isDevelopment: boolean, isLibrary: boolean): webpack.RuleSetRule
   {
     test: /\.ts(x?)$/,
     include: SOURCE_PATH,
-    use: [{ loader: 'ts-loader', options: { onlyCompileBundledFiles: true } }],
+    use: [{
+      loader: 'ts-loader',
+      options: { onlyCompileBundledFiles: true },
+    }],
   },
   // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
   {
