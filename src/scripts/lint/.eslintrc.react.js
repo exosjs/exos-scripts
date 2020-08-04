@@ -105,5 +105,11 @@ module.exports = {
         'react/jsx-handler-names': 'off',
       },
     },
+    {
+      files: ['*.spec.*'],
+      rules: {
+        '@typescript-eslint/ban-ts-ignore': 'off',
+      },
+    },
   ],
 };
