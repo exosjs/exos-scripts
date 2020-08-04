@@ -70,6 +70,8 @@ console.log(filesToUse !== defaultFilesToUse ? `Found custom rule to identify fi
       process.exit(1);
     }
 
+    // Only fail because of warnings if --max-warnings is sent
+    // See https://eslint.org/docs/user-guide/command-line-interface#-max-warnings 
     const maxWarnings = getArgumentValue(process.argv, 'max-warnings', '-1');
     if (maxWarnings !== '-1' && globalResults.warningCount > parseInt(maxWarnings, 10)) {
       process.exit(1);
