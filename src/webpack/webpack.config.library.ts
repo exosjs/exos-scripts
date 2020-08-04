@@ -33,11 +33,15 @@ const webpackConfig: webpack.Configuration = {
 
   resolve: {
     alias: resolveAliases(),
-    extensions: ['.ts', '.tsx', '.scss', '.js', '.jsx', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 
   module: {
     rules: resolveModuleRules(isDevelopment, true),
+  },
+
+  optimization: {
+    minimize: false,
   },
 
   plugins: resolvePlugins(isDevelopment, true, version),
