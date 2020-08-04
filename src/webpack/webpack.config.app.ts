@@ -31,6 +31,8 @@ const webpackConfig: webpack.Configuration = {
 
   externals: resolveExternals(false),
 
+  target: 'web',
+
   mode: isDevelopment ? 'development' : 'production',
 
   entry: {

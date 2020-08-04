@@ -76,7 +76,7 @@ You can modify the configuration of all the scripts this way (`lint`, `start`, `
 
 ### Start
 
-It spins up a [Webpack DevServer[(https://webpack.js.org/configuration/dev-server/)] with your web app, configured with [Hot Module replacement](https://webpack.js.org/concepts/hot-module-replacement/) and [Cheap Module Source maps](https://webpack.js.org/configuration/devtool/).
+It spins up a [Webpack DevServer](https://webpack.js.org/configuration/dev-server/)] with your web app, configured with [Hot Module replacement](https://webpack.js.org/concepts/hot-module-replacement/) and [Cheap Module Source maps](https://webpack.js.org/configuration/devtool/).
 
 It supports [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [SCSS](https://sass-lang.com/guide) and [CSS Modules](https://github.com/css-modules/css-modules). Plus, it automatically types your style files by using the [typings-for-css-modules-loader](https://github.com/TeamSupercell/typings-for-css-modules-loader) library.
 

@@ -19,6 +19,8 @@ const webpackConfig: webpack.Configuration = {
 
   externals: resolveExternals(true),
 
+  target: 'web',
+
   mode: isDevelopment ? 'development' : 'production',
 
   entry: {
@@ -28,7 +30,6 @@ const webpackConfig: webpack.Configuration = {
   output: {
     filename: '[name].min.js',
     path: OUTPUT_PATH,
-    libraryTarget: 'commonjs2',
   },
 
   resolve: {
