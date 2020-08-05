@@ -95,8 +95,10 @@ module.exports = {
     {
       files: ['*.stories.*'],
       rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
         'react/no-multi-comp': 'off',
         'react/jsx-no-bind': 'off',
+        'no-console': 'off',
       },
     },
     {
@@ -108,6 +110,7 @@ module.exports = {
     {
       files: ['*.spec.*'],
       rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/ban-ts-ignore': 'off',
       },
     },
