@@ -76,7 +76,7 @@ module.exports = {
     }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
-    indent: ['error', 2],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
       ObjectExpression: {
