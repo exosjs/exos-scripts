@@ -42,6 +42,7 @@ module.exports = {
     }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
+    indent: ['error', 2],
     'no-prototype-builtins': 'off',
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     'object-curly-newline': ['error', {
