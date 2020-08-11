@@ -30,6 +30,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+    'react/jsx-curly-spacing': ['error', { when: 'never', children: true }],
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
@@ -72,23 +73,29 @@ module.exports = {
     }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
+    'indent': ['error', 2],
+    'no-ternary': 'error',
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
       ObjectExpression: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ObjectPattern: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ImportDeclaration: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ExportDeclaration: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
     }],
   },

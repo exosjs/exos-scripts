@@ -42,24 +42,30 @@ module.exports = {
     }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
+    'indent': ['error', 2],
+    'no-ternary': 'error',
     'no-prototype-builtins': 'off',
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     'object-curly-newline': ['error', {
       ObjectExpression: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ObjectPattern: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ImportDeclaration: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
       ExportDeclaration: {
         multiline: true,
         consistent: true,
+        minProperties: 3,
       },
     }],
   },
