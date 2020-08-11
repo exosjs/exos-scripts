@@ -30,7 +30,10 @@ module.exports = {
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
-    'react/jsx-curly-spacing': ['error', { when: 'never', children: true }],
+    'react/jsx-curly-spacing': ['error', {
+      when: 'never',
+      children: true,
+    }],
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
@@ -73,8 +76,7 @@ module.exports = {
     }],
     'func-names': ['error', 'always'],
     'func-style': ['error', 'declaration'],
-    'indent': ['error', 2],
-    'no-ternary': 'error',
+    indent: ['error', 2],
     'no-prototype-builtins': 'off',
     'object-curly-newline': ['error', {
       ObjectExpression: {
@@ -100,6 +102,12 @@ module.exports = {
     }],
   },
   overrides: [
+    {
+      files: ['*.jsx', '*.tsx'],
+      rules: {
+        'no-ternary': 'error',
+      },
+    },
     {
       files: ['*.js', '*.jsx'],
       rules: {

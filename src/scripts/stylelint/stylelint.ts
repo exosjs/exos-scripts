@@ -39,7 +39,9 @@ import stylelintrc = require('./.stylelintrc.js');
       console.log(chalk.red('❌ There were errors while running stylelint.'));
 
       // Results are grouped per file, inside of a warnings array
-      results.forEach(({ source, warnings, invalidOptionWarnings }) => {
+      results.forEach(({
+        source, warnings, invalidOptionWarnings,
+      }) => {
         const filePath = source.replace(ROOT_PATH, '');
 
         // invalidOptionWarnings contains all stylelint configuration errors
@@ -49,7 +51,9 @@ import stylelintrc = require('./.stylelintrc.js');
 
         // warnings contains all code lines in the business logic
         // that are not compliant with the stylelint configuration (errors and warnings)
-        warnings.forEach(({ line, column, severity, text }) => {
+        warnings.forEach(({
+          line, column, severity, text,
+        }) => {
           const message = `${filePath}:${line}:${column}: ${text} [${severity}]`;
           console.log(severity === 'error' ? chalk.red(message) : chalk.yellow(message));
         });
