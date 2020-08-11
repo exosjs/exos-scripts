@@ -49,22 +49,18 @@ module.exports = {
       ObjectExpression: {
         multiline: true,
         consistent: true,
-        minProperties: 3,
       },
       ObjectPattern: {
         multiline: true,
         consistent: true,
-        minProperties: 3,
       },
       ImportDeclaration: {
         multiline: true,
         consistent: true,
-        minProperties: 3,
       },
       ExportDeclaration: {
         multiline: true,
         consistent: true,
-        minProperties: 3,
       },
     }],
   },
