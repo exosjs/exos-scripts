@@ -19,6 +19,7 @@ export default (isDevelopment: boolean, isLibrary: boolean, version: string): we
     from: ASSETS_PATH,
     to: OUTPUT_PATH,
     ignore: ['index.ejs'],
+    context: ASSETS_PATH
   }]);
   const htmlWebpackPlugin = new HtmlWebpackPlugin({
     cache: true,
@@ -27,7 +28,6 @@ export default (isDevelopment: boolean, isLibrary: boolean, version: string): we
     filename: path.resolve(OUTPUT_PATH, 'index.html'),
     // Arbitrary options that are sent to the template file
     isDevelopment,
-    publicPath: OUTPUT_PUBLIC_PATH,
     version,
   });
   const watchIgnorePlugin = new webpack.WatchIgnorePlugin([/scss\.d\.ts$/]);
