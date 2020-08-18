@@ -5,8 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import {
   ASSETS_PATH,
-  OUTPUT_PATH,
-  OUTPUT_PUBLIC_PATH,
+  OUTPUT_PATH
 } from '../common/paths';
 
 export default (isDevelopment: boolean, isLibrary: boolean, version: string): webpack.Plugin[] => {
@@ -19,7 +18,7 @@ export default (isDevelopment: boolean, isLibrary: boolean, version: string): we
     from: ASSETS_PATH,
     to: OUTPUT_PATH,
     ignore: ['index.ejs'],
-    context: ASSETS_PATH
+    context: ASSETS_PATH,
   }]);
   const htmlWebpackPlugin = new HtmlWebpackPlugin({
     cache: true,
