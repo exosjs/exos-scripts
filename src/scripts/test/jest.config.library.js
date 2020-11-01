@@ -8,10 +8,11 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  testRegex: '^.+\\.(tests?|spec)\\.[jt]sx?$',
+  testMatch: ['**/*.spec.[jt]s?(x)'],
+  testPathIgnorePatterns: ['/lib/', '/dist/', '/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: !!process.env.CI,
-  collectCoverageFrom: ['**/*.{js,jsx,tsx,ts}', '!**/node_modules/**'],
+  collectCoverageFrom: ['./src/**/*.[jt]s?(x)'],
   moduleNameMapper: {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|svg)$': path.join(__dirname, 'FileMock.js'),

@@ -23,7 +23,7 @@
   "homepage": "https://github.com/exosjs/exos-scripts#readme",
   "scripts": {
     "lint": "eslint --ext .js --ext .ts src/",
-    "test": "npm run build && jest --config=./src/scripts/test/jest.config.library.js --coverage=false",
+    "test": "jest --config=.jestrc.js",
     "build": "rm -rf lib && tsc",
     "prepublishOnly": "npm run build",
     "publish": "semantic-release"
@@ -60,7 +60,7 @@
     "stylelint": "^13.6.0",
     "stylelint-config-property-sort-order-smacss": "^6.3.0",
     "stylelint-config-standard": "^20.0.0",
-    "ts-jest": "^26.0.0",
+    "ts-jest": "^26.1.4",
     "ts-loader": "^6.2.2",
     "tslib": "^2.0.0",
     "url-loader": "^4.0.0",
@@ -78,6 +78,7 @@
     "@types/webpack": "^4.41.10",
     "@types/webpack-dev-server": "^3.10.1",
     "semantic-release": "^17.0.8",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.3",
     "webpack-cli": "^3.3.11"
   }
