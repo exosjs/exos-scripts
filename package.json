@@ -79,6 +79,6 @@
     "@types/webpack-dev-server": "^3.10.1",
     "semantic-release": "^17.0.8",
     "typescript": "^3.9.3",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^4.7.0"
   }
 }
